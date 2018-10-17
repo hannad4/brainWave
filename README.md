@@ -58,6 +58,7 @@ individual/team term projects will be reinforced during this project’s life cy
 in class such as use case diagrams, state charts, and class diagrams will be utilized to aid in the
 project’s development as needed. However, since this is an individual (“one-man”) project
 assignment, concepts such as paradigms of team management will not be used.
+An iterative process model will be used; this is ideal for this specific project, since various prototypes are due throughout this product’s development life cycle. The iterative model is also beneficial in that it builds its complexity “from the ground up.” That is to say, the first prototype may be very simplistic in design, with perhaps minimal to no “real” functionality implemented. Functionality can then be added in throughout the evolution of the product.
 
 
 **Resources to be Used:**
