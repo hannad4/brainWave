@@ -1,0 +1,31 @@
+<!-- This file was NOT auto-generated -->
+
+<!-- Defining style for tables to help with organization (and make the app look more pretty) -->
+<style>
+table, th, td {
+	border: 1px solid black;
+}
+</style>
+
+<!-- App logo -->
+<a href="/welcome/index">
+	<img src="https://image.ibb.co/ccBNDA/testing.jpg" alt="Potential Brain Wave logo" border="0">
+</a>
+
+<!-- Header -->
+<h1>Article Search Results</h1> 
+
+<!-- Putting instructions in their own sections -->
+<table style="width:100%">
+<p>Below is the results found for your search. Please note: A blank page means no results were found.</p>  
+</table>
+
+<!-- Running through each result and displaying the title with a link to view (showing the entire article would be too clustered) -->
+<table style="width:100%">
+<% @results.each do |result| %>
+	<tr>
+		<p><b>Article Name: </b><%= result.title %><br></p> 
+		<p><b>Article Text: </b><%= link_to 'View', article_path(result) %><br></p>
+	</tr>
+</table>
+<% end %>

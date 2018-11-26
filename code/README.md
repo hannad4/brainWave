@@ -1,11 +1,24 @@
-# Steps to Get This App Running
+# README
 
-Note: This application uses Ruby Version 2.5.1p57, and Rails Version 5.2.1
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-1. Clone/Copy this project onto your local machine
+Things you may want to cover:
 
-2. Ensure that you have Ruby and Rails installed
+* Ruby version
 
-3. Navigate to the code folder using your bash/terminal 
+* System dependencies
 
-4. Run `rails s` or `rails server`
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

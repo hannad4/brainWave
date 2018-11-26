@@ -1,0 +1,19 @@
+<!-- This file was NOT auto-generated -->
+
+<!-- Simple Logo that is implemented at the top of the app's pages -->
+<a href="/welcome/index">
+<img src="https://image.ibb.co/ccBNDA/testing.jpg" alt="Potential Brain Wave logo" border="0">
+</a>
+
+<!-- Header & Short Description -->
+<h1>Welcome to Brain Wave</h1>
+<p>Brain Wave is a hub of various supplemental academic resources for all sorts of students.<br><br>If you need help with something school related, check out the
+
+<!-- Link to the list of articles -->
+<font color="blue"><b><%= link_to 'list of articles', controller: 'articles' %></b></font>.<br><br>You can return to this homepage at any time by clicking on the logo at the top of each screen.<br><br>Search at any time from the search bar on the page.</p>
+
+<!-- Search box which takes in a search entry and searchs list of articles through the pages_controller -->
+<%= form_tag(search_page_path, :method => "get") do %>   
+<%= search_field_tag :search, params[:search], placeholder: "Search topics here"%>  
+  <%= button_tag "Search",:name => nil%>    
+<% end %> 

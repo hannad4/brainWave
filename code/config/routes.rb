@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'pages#welcome'
-  get 'pages/welcome'
-  get 'pages/explore'
-  get 'pages/help'
+  get '/search' => 'pages#search', :as => 'search_page'
+  get 'welcome/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :articles
+  root 'welcome#index'
 end

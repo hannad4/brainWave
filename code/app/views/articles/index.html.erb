@@ -1,0 +1,54 @@
+<!-- This file was NOT auto generated -->
+
+<!-- App logo -->
+<a href="/welcome/index">
+<img src="https://image.ibb.co/ccBNDA/testing.jpg" alt="Potential Brain Wave logo" border="0">
+</a>
+
+<!-- Creating header "Articles" -->
+<h1>Articles</h1>
+
+<!-- Adding ability to search on this page (in the middle of the page at the top) -->
+<div align = center>
+<%= form_tag(search_page_path, :method => "get",   
+class: 'navbar-form navbar-left') do %>  
+<div class="input-group" align="center">  
+<%= search_field_tag :search, params[:search], placeholder: "Search topics here", class: "form-control" %>  
+  <%= button_tag "Search",:name => nil%>  
+</div>  
+<% end %> 
+</div>
+
+<!-- Clicking on Create an Article here will lead to the new article path -->
+<%= link_to 'Create an Article', new_article_path %>
+
+<!-- Defining style for table borders -->
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+<!-- Articles will be put in table with Title, View, Edit, Delete headers -->
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+<!-- Rendering each article into table. View, Edit, Delete will be dependant on that article's path -->
+  <% @articles.each do |article| %>
+    <tr>
+      <td style="text-align: center"><%= article.title %>&nbsp;</td>
+<!--       <td><%= article.text %>&nbsp;</td>
+ -->      <td style="text-align: center"><%= link_to 'View', article_path(article) %></td>
+      <td style="text-align: center"><%= link_to 'Edit', article_path(article) %></td>
+   <!-- If request for deletion is made, confirmation box (rendered by browswer) must be completed -->
+      <td style="text-align: center"><%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
